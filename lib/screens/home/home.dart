@@ -10,6 +10,33 @@ class HomeWidget extends StatefulWidget {
 class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Text("Home");
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          SizedBox(
+            height: 48,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Instagram",
+                style: TextStyle(fontSize: 24),
+              ),
+              Row(
+                children: [
+                  Icon(Icons.heart_broken_sharp),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  Icon(Icons.message)
+                ],
+              )
+            ],
+          )
+        ],
+      ),
+    );
   }
 }
